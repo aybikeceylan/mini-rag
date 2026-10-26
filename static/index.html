@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not sorusu</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Not sorusu</h1>
+      <p class="lede">Metni yaz, parçaları gör, soruyu yaz, bulunan parçaları ve cevabı oku.</p>
+      <div id="durum" role="status"></div>
+      <p id="hata" class="hata" role="alert" hidden></p>
+    </header>
+
+    <section aria-labelledby="baslik-1">
+      <h2 id="baslik-1"><span class="num">1</span> Metni yaz</h2>
+      <label for="metin">Not</label>
+      <textarea id="metin" rows="8"></textarea>
+      <div class="actions">
+        <button type="button" id="ornek">Örnek metin</button>
+        <button type="button" id="kaydet" class="primary">Kaydet</button>
+        <button type="button" id="temizle">Temizle</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="baslik-2">
+      <h2 id="baslik-2"><span class="num">2</span> Kayıtlı parçalar</h2>
+      <p id="kayit-bos" class="empty">Henüz kayıtlı parça yok.</p>
+      <ul id="kayitli" class="chunks"></ul>
+    </section>
+
+    <section aria-labelledby="baslik-3">
+      <h2 id="baslik-3"><span class="num">3</span> Soruyu yaz</h2>
+      <label for="soru">Soru</label>
+      <input id="soru" type="text" autocomplete="off">
+      <div class="actions">
+        <button type="button" id="sor" class="primary">Sor</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="baslik-4">
+      <h2 id="baslik-4"><span class="num">4</span> Bulunan parçalar ve cevap</h2>
+      <p class="hint">Küçük mesafe daha yakın demektir.</p>
+      <p id="bulunan-bos" class="empty">Henüz bulunan parça yok.</p>
+      <ul id="bulunan" class="chunks"></ul>
+      <h3>Cevap</h3>
+      <p id="cevap" class="answer empty">Henüz cevap yok.</p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+:root {
+  --bg: #f3efe6;
+  --paper: #fffdf8;
+  --ink: #241f1a;
+  --muted: #5e574e;
+  --line: #e3d9cb;
+  --field: #cbbfae;
+  --green: #2c4034;
+  --green-dark: #24362c;
+  --warn: #6b2e24;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin: 0 0 1.2rem;
+  font-size: 1.6rem;
+}
+
+h3 {
+  margin: 1.6rem 0 0.55rem;
+  font-size: 1.3rem;
+}
+
+.num {
+  color: var(--green);
+  font-variant-numeric: tabular-nums;
+}
+
+.lede {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
+#durum:not(:empty),
+.hata:not([hidden]) {
+  margin-top: 1rem;
+}
+
+#durum p,
+.hata {
+  margin: 0;
+  color: var(--warn);
+}
+
+#durum p + p {
+  margin-top: 0.35rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+section {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.6rem 1.45rem 1.7rem;
+  margin: 0 0 1.6rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.45rem;
+}
+
+textarea,
+input[type="text"] {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--field);
+  border-radius: 0.7rem;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+textarea {
+  min-height: 12rem;
+  resize: vertical;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+input[type="text"] {
+  min-height: 3.1rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+button {
+  appearance: none;
+  margin: 0;
+  padding: 0.65rem 1.1rem;
+  border: 2px solid var(--green);
+  border-radius: 0.7rem;
+  background: #fff;
+  color: var(--green);
+  font: inherit;
+  font-size: 1.08rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--green);
+  color: #f6f3ec;
+}
+
+button:hover {
+  background: #efe8dc;
+}
+
+button.primary:hover {
+  background: var(--green-dark);
+}
+
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+.hint {
+  margin: 0 0 1rem;
+}
+
+.empty {
+  margin: 0;
+  color: var(--muted);
+}
+
+.chunks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chunks:empty {
+  display: none;
+}
+
+.chunks li + li {
+  margin-top: 1.15rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+}
+
+.field {
+  margin: 0 0 0.7rem;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.name {
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.block .name,
+.block .value {
+  display: block;
+}
+
+.block .value {
+  margin-top: 0.2rem;
+}
+
+.value,
+.answer {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.answer {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.answer.empty {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
